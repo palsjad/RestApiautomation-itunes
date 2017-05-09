@@ -21,4 +21,7 @@ public interface Constants {
 	public static final String POSTURL1 = "https://api.twitter.com/1.1/direct_messages/events/new.json";
  
 }
- 
+
+
+
+//https://api.twitter.com/1.1/direct_messages/events/new.json?type=message_create&message_create.target.recipient_id=856678409467871232&message_create.message_data=HelloWorld!

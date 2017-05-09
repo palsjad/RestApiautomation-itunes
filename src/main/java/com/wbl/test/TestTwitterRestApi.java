@@ -53,13 +53,17 @@ public class TestTwitterRestApi {
 		 */
 
 		JSONObject jsonObj = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
-		// get entity will give us thet actual response body entity
+		
+		
+ 		// get entity will give us thet actual response body entity
 		// get content gives us the entire content which is converted to a
 		// string and passing it to the json object constructor
 
 		System.out.println(jsonObj.get("screen_name"));
 		System.out.println(jsonObj.get("always_use_https"));
 		System.out.println(jsonObj.get("geo_enabled"));
+	//	System.out.println(jsonObj.get("sleep_time.enabled"));
+
 
 		Assert.assertEquals(jsonObj.get("screen_name"), "PalsPj");
 		Assert.assertEquals(jsonObj.get("always_use_https"), true);
@@ -101,14 +105,14 @@ public class TestTwitterRestApi {
 		System.out.println(response.getStatusLine().getReasonPhrase());
 
 
-		/*JSONObject jsonObj = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
+/*		 JSONObject jsonObj = new JSONObject(IOUtils.toString(response.getEntity().getContent()));
 
 		System.out.println(jsonObj);
 
 		System.out.println(jsonObj.get("screen_name"));
 		System.out.println(jsonObj.get("name"));
 		System.out.println(jsonObj.get("location"));
-*/
+ */
 	}
 
 }
